@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   post 'users' , to: 'users#create'
   root to: 'users#index'
 get 'users/:id', to: 'users#show', as: 'user'
-  get "users/edit"
+  get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
+  patch 'users/:id', to: 'users#update', as: 'update_user'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
